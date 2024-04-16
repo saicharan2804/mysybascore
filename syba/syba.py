@@ -47,8 +47,8 @@ class SybaClassifier:
 
 
     def fitDefaultScore(self):
-        print('project_root: ', project_root)
-        print('path: ', os.path.join(project_root, "syba", "syba.csv.gz"))
+        # print('project_root: ', project_root)
+        # print('path: ', os.path.join(project_root, "syba", "syba.csv.gz"))
         with gzip.open(os.path.join(project_root, "syba", "syba.csv.gz"), mode="rt") as counts:
             self.fitFromCountFile(counts)
 
