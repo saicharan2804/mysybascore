@@ -47,6 +47,8 @@ class SybaClassifier:
 
     def fitDefaultScore(self):
         this_dir, this_filename = os.path.split(__file__)
+        print('this_dir: ', this_dir)
+        print('this_filename: ', this_filename)
         with gzip.open(os.path.join(this_dir, "syba.csv.gz"), mode="rt") as counts:
             self.fitFromCountFile(counts)
 
