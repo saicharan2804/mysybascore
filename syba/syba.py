@@ -25,6 +25,7 @@ import os
 import gzip
 from rdkit.Chem import AllChem as Chem
 
+project_root = os.path.dirname(os.path.dirname(__file__))
 
 class SybaClassifier:
     """
@@ -49,7 +50,7 @@ class SybaClassifier:
         this_dir, this_filename = os.path.split(__file__)
         print('this_dir: ', this_dir)
         print('this_filename: ', this_filename)
-        with gzip.open(os.path.join(this_dir, "syba.csv.gz"), mode="rt") as counts:
+        with gzip.open(os.path.join(project_root, "syba", "syba.csv.gz"), mode="rt") as counts:
             self.fitFromCountFile(counts)
 
 
